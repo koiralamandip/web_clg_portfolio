@@ -1,0 +1,51 @@
+
+
+section{
+  display: flex;
+  flex-flow: column wrap; /* To keep the contents of the main section of the page in column */
+  align-items: center; /* Align all the contents to center */
+}
+
+.content{
+  margin:30px 2% 100px 2%;
+  width:40%;
+  padding: 25px 1%;
+  box-shadow: 10px 10px 3px 3px rgba(0,0,0,1), -10px -10px 3px 3px rgba(0,0,0,1); /* Giving shadow to the block containing biography*/
+  display: flex;
+  flex-flow: column wrap; /* Put the contents inside this block "content" in column */
+  align-items: center;
+  color:skyblue; /* Applying skyblue colour for the text*/
+  text-align: justify;
+  background-color: #222;
+  font-family: "Cabin Sketch"; /* Specifying google font to biography*/
+  font-size: 1.125em;
+  border:2px solid white;
+}
+
+/* Giving width and padding of the block containing biography*/
+.biography{
+  width:98%;
+  padding:1%;
+}
+
+/* To make the page mobile responsive.. Change CSS properties of below mentioned tags when the width of device is less than 1200px*/
+@media all and (max-width:1200px){
+  .content{
+    width:42%;
+  }
+
+  .biography{
+    width: 88%;
+  }
+}
+
+/* To make the page mobile responsive.. Change CSS properties of below mentioned tags when the width of device is less than 700px*/
+@media all and (max-width:700px){
+  .content{
+    width:92%;
+  }
+
+  .biography{
+    width: 90%;
+  }
+}

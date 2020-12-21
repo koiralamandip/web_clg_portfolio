@@ -1,0 +1,157 @@
+
+
+/* CSS for the middle portion of CV page*/
+
+.content{
+  padding:0.5%;
+  width:99%;
+  display:flex;
+  flex-flow:row wrap; /* To keep all the contents of CV page in a single row */
+  justify-content: space-between;
+  color:skyblue;
+  font-family: "Cabin Sketch", cursive;
+}
+
+/* Specifying width and padding for the block containing image*/
+.image-container{
+  padding:5%;
+  width:15%;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.my-img{
+  border-top-right-radius: 50%;
+}
+
+.details{
+  width:70%;
+  padding:15px 0.5%;
+  display:flex;
+  flex-flow: row wrap; /* To show CV detail blocks in a row and wrap them if they don't fit in a singe row*/
+  justify-content: space-around; /* Keep spaces around the detail blocks */
+}
+
+.personal_info, .education_info, .course_info, .skill_info, .profession_info, .activity_info{
+  width:40%;
+  background-color:#222;
+  padding:1px 0.5%;
+  margin-bottom:35px;
+  border:2px solid white;
+  box-shadow: 10px 10px 3px 3px rgba(0,0,0,1), -10px -10px 3px 3px rgba(0,0,0,1); /* Applying shadow on blocks */
+}
+
+/* Title for each CV details is made bold and lightgreen in colour */
+.title_personal, .title_education, .title_course, .title_skill, .title_profession, .title_activity{
+  font-weight: bold;
+  color:lightgreen;
+}
+
+/* To use icons before titles of each block of details */
+
+.title_personal::before{
+  content:url(../images/pdetail.png); /* Icon for personal information*/
+}
+
+.title_education::before{
+  content:url(../images/edu.png); /* Icon for education*/
+}
+
+.title_course::before{
+  content:url(../images/course.png); /* Icon for coursework*/
+}
+
+.title_skill::before{
+  content:url(../images/skill.png); /* Icon for skills*/
+}
+
+.title_profession::before{
+  content:url(../images/prof.png); /* Icon for professional experience*/
+}
+
+.title_activity::before{
+  content:url(../images/activity.png); /* Icon for activity*/
+}
+
+.data{
+  display:flex;
+  flex-flow: row wrap; /* To keep the details' title and data in a row */
+  justify-content: space-around;
+}
+
+.caption{
+  width:39%;
+}
+
+.value{
+  width:60%;
+}
+
+.edu_list, .skill_list{
+  margin:0;
+  padding:0;
+}
+
+/* To make the page mobile responsive.. Change CSS properties of below mentioned tags when the width of device is less than 1100px*/
+@media all and (max-width:1100px){
+
+  .content{
+    flex-flow: column wrap;
+  }
+
+  .image-container{
+    width:100%;
+    padding:0%;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .my-img{
+    width:100px;
+    height:200px;
+  }
+
+  .details{
+    display:flex;
+    flex-flow:column wrap; /* Change the blocks of details to be in column to fit the device width */
+    align-items: center;
+    width:95%;
+    padding:0;
+    padding-top: 35px;
+  }
+  .personal_info, .education_info, .course_info, .skill_info, .profession_info, .activity_info{
+    width:50%;
+    margin-bottom: 35px;
+  }
+
+}
+
+/* To make the page mobile responsive.. Change CSS properties of below mentioned tags when the width of device is less than 800px*/
+@media all and (max-width:800px){
+
+  .image-container{
+    width:100%;
+    padding:0%;
+  }
+
+  .my-img{
+    width:100px;
+    height:200px;
+  }
+
+  .details{
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    width:99%;
+    padding:0;
+    padding-top: 35px;
+  }
+  .personal_info, .education_info, .course_info, .skill_info, .profession_info, .activity_info{
+    width:90%;
+    margin-bottom: 35px;
+    font-size: 0.750em;
+  }
+
+}

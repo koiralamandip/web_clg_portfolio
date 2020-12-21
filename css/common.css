@@ -1,0 +1,191 @@
+
+/* This css file cascades style in header and footer of all 4 pages */
+
+/* To set default margin and padding of the body tag to 0..
+  To assign blackish color to the pages...
+*/
+
+body{
+  padding:0;
+  margin:0;
+  background-color: #999;
+}
+
+/* css for header*/
+header{
+  display:flex;
+  flex-flow: row wrap; /* Display the contents of header in row*/
+  justify-content: space-between; /* Keep spaces between the contents of header*/
+  background-color:#111;
+  width:98%;
+  margin-bottom:0.1%;
+  padding:0.5% 1% 0% 1%;
+  box-shadow: 0px 1px 10px 1px #222; /* A short shadow at the bottom of the header */
+}
+
+.logo-container{
+  width:50%; /* Width of the block containing logo image*/
+}
+
+.logo-image{
+  cursor: pointer; /* Sets the cursor for the logo image as pointer that shows on hovering to the image*/
+}
+
+.menubar{
+  width:50%; /* Width of block containing menus*/
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: flex-end; /* To keep menus to the botom of the header*/
+}
+
+/* To keep all the menu items in a single row and towards the end of the block containing the menu items*/
+.menubar_list{
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none; /* To disable bullet points from displaying*/
+}
+
+.menubar_list li{
+  padding:15px;
+  background-color: transparent;
+}
+
+/* Formatting the text of menubar*/
+.menubar_list li a{
+  text-decoration: none;
+  color:#eee;
+  font-family: "Cabin Sketch", cursive;
+  font-weight: bolder;
+  transition: border-bottom 0.5s; /* Apply transition effect to the bottom border of the block containing text for menu item*/
+}
+
+.menubar_list li a:hover {
+  border-bottom:5px solid red; /* To change the bottom border of the block of text on hover to show the transition effect*/
+}
+
+/* Formatting the display of title of the page*/
+.proverb{
+  text-align: center;
+  padding:0%;
+  font-family: 'Russo One';
+  font-weight: bolder;
+  font-size: 1.563em;
+  color:#333;
+  width:100%;
+}
+
+.proverb h4{
+  margin:0;
+  padding:0;
+}
+
+/* Style for the social media link block, providing width and height and other rules for the block */
+.social_media{
+  position:fixed; /* To keep the block at a fixed position on screen */
+  top:45%;
+  width:100px;
+  left:-64px; /* This position shows only a part of the block on screen and hides other part */
+  border:1px solid grey;
+  display:flex;
+  flex-flow: row wrap; /* To keep the contents in a single row.. */
+  justify-content: space-between;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: transform 1s; /* Apply effect to show the full block on screen*/
+  background: white;
+}
+
+/* To keep actual media links (facebook and twitter, in this case) in column.. */
+.media_link{
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+/* Specifying width and height of images of social medias*/
+.find-img{
+  width:50px;
+  height:50px;
+}
+
+/* Grow the size of social medias images on hover*/
+.find-img:hover{
+  transform:scale(1.2);
+}
+
+/* Formatting the style of that portion of social media link that shows on screen initially */
+.find{
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* To show up the full block of media link on hover*/
+.social_media:hover{
+  transform: translate(64px,0px);
+}
+
+/* Applying color and aligning the contents of footer in column..*/
+footer{
+  text-align: center;
+  color:white;
+  background-color: #111;
+  width:99%;
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding:0.5%;
+  font-family: "Russo One";
+}
+
+.footer_menu{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+  width:45%;
+  list-style: none;
+}
+
+.footer_menu li{
+  margin-bottom: 5px;
+}
+
+.footer_menu li a{
+  text-decoration: none;
+  color:#eee;
+  transition:border-bottom 0.5s;
+}
+
+.footer_menu li a:hover{
+  border-bottom: 5px solid red;
+}
+
+/* Make the page mobile responsive..
+  Change the css for below tags when the width of the device is below 800px */
+@media all and (max-width:800px){
+  header{
+    display:flex;
+    flex-flow: column wrap;
+  }
+  .logo-container{
+    width:100%;
+    text-align: center;
+  }
+  .menubar{
+    width:100%;
+    text-align: center;
+  }
+  .menubar_list{
+    display:flex;
+    flex-flow: column wrap;
+  }
+
+  .footer_menu{
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}

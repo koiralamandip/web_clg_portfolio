@@ -1,0 +1,110 @@
+
+
+section{
+  display: flex;
+  flex-flow: column wrap; /* To keep the contents in the main section in column*/
+  align-items: center; /* To align the contents at center */
+}
+
+.contact_form{
+  margin:25px 2% 80px 2%;
+  width:30%;
+  padding: 15px 1%;
+  box-shadow: 10px 10px 3px 3px rgba(0,0,0,1), -10px -10px 3px 3px rgba(0,0,0,1);
+  display: flex;
+  flex-flow: column wrap; /* To keep the contents inside the form in column */
+  align-items: center;
+  color:#eee;
+  background-color: #222;
+  font-family: "Cabin Sketch";
+  border:2px solid white;
+}
+
+/* Specifying width and padding for the block containing textboxes and textareas inside contact form*/
+.data{
+  width:98%;
+  padding:1%;
+}
+
+.topic_data{
+  display:flex;
+  flex-flow: column wrap; /* To keep each textboxes, a textarea and a submit button, each in a different line*/
+  padding:1%;
+  width:98%;
+}
+
+/* Formatting the css for textboxes */
+.topic_data input{
+  height:35px;
+  width:72%;
+  border-radius: 5%;
+  padding: 0px 14%;
+  font-weight: bold;
+  background-color: #eee;
+}
+
+/* Positioning the label for textboxes to relative.. */
+.topic_data label{
+  position: relative;
+}
+
+.name::before{
+  position: absolute;
+  content:url(../images/pdetail.png); /* Icon for 'Name' field */
+  left:1%;
+  top:100%;
+}
+
+.email::before{
+  position: absolute;
+  content:url(../images/email.png); /* Icon for 'Email' field */
+  left:1%;
+  top:110%;
+}
+
+.mob::before{
+  position: absolute;
+  content:url(../images/mob.png); /* Icon for 'Mobile' field */
+  left:1%;
+  top:100%;
+}
+
+textarea{
+  resize: none;
+  padding:2px 2%;
+  width:96%;
+  font-weight: bolder;
+  background-color: #ccc;
+}
+
+.btn_submit{
+  height:35px; /* Specifying height for submit button */
+  border-radius: 5%; /* Making the submit button slightly round */
+  color:#111;
+  font-weight: bold;
+  font-size: 1.250em;
+  font-family: "Russo One";
+  margin:1%;
+}
+
+/* To make the page mobile responsive.. Change CSS properties of below mentioned tags when the width of device is less than 1200px*/
+@media all and (max-width:1200px){
+  .contact_form{
+    width:42%;
+  }
+
+  .data{
+    width: 88%;
+  }
+}
+
+/* To make the page mobile responsive.. Change CSS properties of below mentioned tags when the width of device is less than 700px*/
+@media all and (max-width:700px){
+  .contact_form{
+    width:92%;
+  }
+
+  .data{
+    width: 90%;
+  }
+}
